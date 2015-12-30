@@ -121,3 +121,13 @@ func (t *Tokbox) NewSession(location string, p2p bool) (*Session, error) {
 	o.t = t
 	return &o, nil
 }
+
+func GetSession(sessionId, partnerId, createDt, sessionStatus string, tb *Tokbox) *Session {
+	s := &Session{}
+	s.SessionId = sessionId
+	s.PartnerId = partnerId
+	s.CreateDt = createDt
+	s.SessionStatus = sessionStatus
+	s.t = tb
+	return s
+}
