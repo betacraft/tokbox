@@ -131,3 +131,7 @@ func GetSession(sessionId, partnerId, createDt, sessionStatus string, tb *Tokbox
 	s.t = tb
 	return s
 }
+
+func (tb *Tokbox) GetApiKey() string {
+	return tb.apiKey
+}
